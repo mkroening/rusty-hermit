@@ -682,6 +682,9 @@ extern "C" {
 
 	fn sys_get_priority() -> u8;
 	fn sys_set_priority(tid: Tid, prio: u8);
+
+	#[link_name = "sys_image_start_addr"]
+	pub fn image_start_addr() -> usize;
 }
 
 /// Determine the priority of the current thread
